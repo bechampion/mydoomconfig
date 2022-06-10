@@ -1,6 +1,5 @@
 (map! :desc "company"
-      :leader
-      "S-n" #'company-complete)
+      "C-S-n" #'company-complete)
 (map! :desc "Win action"
       :leader
       "w /" #'evil-window-vsplit
