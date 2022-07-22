@@ -70,8 +70,8 @@
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
 (setq doom-theme 'doom-one)
-(beacon-mode 1)
-(setq beacon-color "#ff9da4")
+;; (beacon-mode 0)
+;; (setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
 (setq projectile-switch-project-action #'projectile-dired)
 (setq doom-themes-treemacs-enable-variable-pitch nil)
@@ -133,3 +133,14 @@
 (define-key evil-visual-state-map (kbd "<down>") 'ignore)
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
+(setenv "GOPATH" "/home/jgarcia/Projects/go")
+(setq fzf/args "-x --print-query --margin=1,0 --color"
+        fzf/executable "fzf"
+        fzf/git-grep-args "-i --line-number %s"
+        ;; command used for `fzf-grep-*` functions
+        ;; example usage for ripgrep:
+        ;; fzf/grep-command "rg --no-heading -nH"
+        fzf/grep-command "grep -nrH"
+        ;; If nil, the fzf buffer will appear at the top of the window
+        fzf/position-bottom 1
+        fzf/window-height 20)

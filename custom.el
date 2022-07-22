@@ -24,13 +24,14 @@
  '(magit-diff-use-overlays nil)
  '(objed-cursor-color "#ff6c6b")
  '(package-selected-packages
-   '(transpose-frame mixed-pitch ewal-doom-themes company-fuzzy))
+   '(rainbow-blocks vterm dirvish transpose-frame mixed-pitch ewal-doom-themes company-fuzzy))
  '(pdf-view-midnight-colors (cons "#bbc2cf" "#282c34"))
  '(pos-tip-background-color "#E6DB74")
  '(pos-tip-foreground-color "#242728")
  '(rustic-ansi-faces
    ["#282c34" "#ff6c6b" "#98be65" "#ECBE7B" "#51afef" "#c678dd" "#46D9FF" "#bbc2cf"])
  '(treemacs-follow-mode t)
+ '(treemacs-show-cursor t)
  '(vc-annotate-background "#282c34")
  '(vc-annotate-color-map
    (list

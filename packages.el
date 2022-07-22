@@ -62,6 +62,7 @@
 (package! mixed-pitch)
 (package! go-mode)
 (package! go)
+(package! vterm)
 (package! evil-surround)
 (package! flycheck :disable t)
 (package! treemacs-perspective :disable t)
