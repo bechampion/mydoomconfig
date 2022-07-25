@@ -68,13 +68,14 @@
 
 
 (setq doom-font (font-spec :family "DejavuSansMono Nerd Font" :size 17 :weight 'normal)
-      doom-big-font (font-spec :family "DejavuSansMono Nerd Font" :size 24))
+      doom-big-font (font-spec :family "DejavuSansMono Nerd Font" :size 24 :weight 'normal))
 (setq doom-theme 'doom-one)
 ;; (beacon-mode 0)
 ;; (setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
 (setq projectile-switch-project-action #'projectile-dired)
-(setq doom-themes-treemacs-enable-variable-pitch nil)
+(setq doom-variable-pitch-font (font-spec :family "DejavuSansMono Nerd Font" :weight 'normal :size 17))
+;; (setq doom-themes-treemacs-enable-variable-pitch nil)
 (flycheck-mode 0)
 (setq window-divider-default-right-width 0)
 (setq window-divider-default-bottom-width 0)
