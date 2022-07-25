@@ -109,8 +109,6 @@
 (define-key evil-normal-state-map (kbd "C-S-n") 'company-complete)
 (define-key evil-normal-state-map (kbd "C-S-l") 'magit-log-all)
 (define-key evil-normal-state-map (kbd "C-S-p") 'magit-pull)
-(define-key evil-visual-state-map (kbd "H") 'ignore)
-(define-key evil-visual-state-map (kbd "L") 'ignore)
 (define-key evil-visual-state-map (kbd "J") 'ignore)
 (define-key evil-visual-state-map (kbd "K") 'ignore)
 (define-key evil-normal-state-map (kbd "H") 'ignore)
@@ -125,6 +123,8 @@
 (setq which-key-idle-delay 0.7)
 (setq which-key-idle-secondary-delay 0.7)
 
+(define-key evil-normal-state-map (kbd "H") 'evil-window-top)
+(define-key evil-normal-state-map (kbd "L") 'evil-window-bottom)
 (define-key evil-normal-state-map (kbd "<left>") 'ignore)
 (define-key evil-visual-state-map (kbd "<left>") 'ignore)
 (define-key evil-normal-state-map (kbd "<right>") 'ignore)
