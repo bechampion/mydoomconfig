@@ -134,6 +134,7 @@
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
 (setenv "GOPATH" "/home/jgarcia/Projects/go")
+(setenv "SHELL" "/usr/bin/bash")
 (setq fzf/args "-x --print-query --margin=1,0 --color"
         fzf/executable "fzf"
         fzf/git-grep-args "-i --line-number %s"
