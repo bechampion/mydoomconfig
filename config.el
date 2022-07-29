@@ -126,6 +126,8 @@
 (setq which-key-idle-delay 0.7)
 (setq which-key-idle-secondary-delay 0.7)
 
+(define-key evil-normal-state-map (kbd "H") 'evil-window-top)
+(define-key evil-normal-state-map (kbd "L") 'evil-window-bottom)
 (define-key evil-normal-state-map (kbd "<left>") 'ignore)
 (define-key evil-visual-state-map (kbd "<left>") 'ignore)
 (define-key evil-normal-state-map (kbd "<right>") 'ignore)
@@ -145,3 +147,4 @@
         ;; If nil, the fzf buffer will appear at the top of the window
         fzf/position-bottom 1
         fzf/window-height 20)
+(define-key special-event-map [config-changed-event] 'ignore)

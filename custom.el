@@ -24,7 +24,7 @@
  '(magit-diff-use-overlays nil)
  '(objed-cursor-color "#ff6c6b")
  '(package-selected-packages
-   '(rainbow-blocks vterm dirvish transpose-frame mixed-pitch ewal-doom-themes company-fuzzy))
+   '(zenburn-theme rainbow-blocks vterm dirvish transpose-frame mixed-pitch ewal-doom-themes company-fuzzy))
  '(pdf-view-midnight-colors (cons "#bbc2cf" "#282c34"))
  '(pos-tip-background-color "#E6DB74")
  '(pos-tip-foreground-color "#242728")
