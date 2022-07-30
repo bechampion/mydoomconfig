@@ -69,7 +69,8 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 17.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-one)
+(setq doom-theme 'darkokai)
+
 ;; (beacon-mode 0)
 ;; (setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
@@ -146,3 +147,6 @@
         ;; If nil, the fzf buffer will appear at the top of the window
         fzf/position-bottom 1
         fzf/window-height 20)
+;This is to preserve highlighting on visual mode
+;You need to do tis in Customize-face seems not to work
+;;(set-face-attribute 'region nil :inherit nil :background "gray30")
