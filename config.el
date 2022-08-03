@@ -109,6 +109,8 @@
 (define-key evil-normal-state-map (kbd "C-S-n") 'company-complete)
 (define-key evil-normal-state-map (kbd "C-S-l") 'magit-log-all)
 (define-key evil-normal-state-map (kbd "C-S-p") 'magit-pull)
+(define-key evil-visual-state-map (kbd "H") 'ignore)
+(define-key evil-visual-state-map (kbd "L") 'ignore)
 (define-key evil-visual-state-map (kbd "J") 'ignore)
 (define-key evil-visual-state-map (kbd "K") 'ignore)
 (define-key evil-normal-state-map (kbd "H") 'ignore)
@@ -134,7 +136,6 @@
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
 (setenv "GOPATH" "/home/jgarcia/Projects/go")
-(setenv "SHELL" "/usr/bin/bash")
 (setq fzf/args "-x --print-query --margin=1,0 --color"
         fzf/executable "fzf"
         fzf/git-grep-args "-i --line-number %s"
@@ -145,3 +146,6 @@
         ;; If nil, the fzf buffer will appear at the top of the window
         fzf/position-bottom 1
         fzf/window-height 20)
+;This is to preserve highlighting on visual mode
+;You need to do tis in Customize-face seems not to work
+;;(set-face-attribute 'region nil :inherit nil :background "gray30")
