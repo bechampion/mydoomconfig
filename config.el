@@ -149,3 +149,4 @@
 ;This is to preserve highlighting on visual mode
 ;You need to do tis in Customize-face seems not to work
 ;;(set-face-attribute 'region nil :inherit nil :background "gray30")
+(nyan-mode)
