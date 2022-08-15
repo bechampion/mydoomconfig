@@ -150,3 +150,6 @@
 ;You need to do tis in Customize-face seems not to work
 ;;(set-face-attribute 'region nil :inherit nil :background "gray30")
 (nyan-mode)
+(setq lsp-headerline-breadcrumb-enable t)
+(setq lsp-headerline-breadcrumb-segments '(project file symbols))
+(setq lsp-headerline-breadcrumb-icons-enable t)
