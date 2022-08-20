@@ -67,7 +67,7 @@
         "l" 'dired-find-file ))
 
 
-(setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 17.5 :weight 'normal)
+(setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
 (setq doom-theme 'darkokai)
 ;; (beacon-mode 0)
