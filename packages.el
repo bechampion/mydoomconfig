@@ -67,3 +67,4 @@
 (package! flycheck :disable t)
 (package! treemacs-perspective :disable t)
 (package! company-terraform)
+(package! nyan-mode)
