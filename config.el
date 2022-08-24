@@ -8,7 +8,6 @@
       "C-s" #'magit-status
       "C-b" #'magit-branch
       "C-S-b" #'revert-buffer)
-
 (map! :leader
       :desc "Git Grep"
       "g /" #'helm-grep-do-git-grep)
