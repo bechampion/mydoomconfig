@@ -119,7 +119,7 @@
 (define-key evil-normal-state-map (kbd "C-h") 'ignore)
 (define-key evil-normal-state-map (kbd "C-j") 'ignore)
 (define-key evil-normal-state-map (kbd "C-k") 'ignore)
-(define-key evil-normal-state-map (kbd "C-l") 'ignore)
+(define-key evil-normal-state-map (kbd "C-l") 'avy-goto-line)
 
 (setq which-key-idle-delay 0.7)
 (setq which-key-idle-secondary-delay 0.7)
