@@ -95,6 +95,7 @@
 
 
 
+
 (define-key evil-normal-state-map (kbd "C-S-t") 'terraform-format-buffer )
 (define-key evil-normal-state-map (kbd "C-S-c") 'comment-line)
 (define-key evil-normal-state-map (kbd "C-e") 'helm-buffers-list)
@@ -152,3 +153,4 @@
 (setq lsp-headerline-breadcrumb-enable t)
 (setq lsp-headerline-breadcrumb-segments '(project file symbols))
 (setq lsp-headerline-breadcrumb-icons-enable t)
+(setq display-line-numbers-type 'relative)
