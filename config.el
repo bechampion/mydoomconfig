@@ -10,7 +10,7 @@
       "C-S-b" #'revert-buffer)
 (map! :leader
       :desc "Git Grep"
-      "g /" #'helm-grep-do-git-grep)
+      "g /" #'helm-projectile-grep)
 (map! :leader
       :desc "dired jump"
       "f j" #'dired-jump)
@@ -68,7 +68,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'darkokai)
+(setq doom-theme 'doom-one)
 ;; (beacon-mode 0)
 ;; (setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
@@ -156,3 +156,13 @@
 (setq display-line-numbers-type 'relative)
 (setq treemacs-show-cursor t)
 (setq treemacs-follow-mode t)
+; This is to ignore dired on helm-recent buffers
+(defun my-filter-dired-buffers (buffer-list)
+  (delq nil (mapcar
+             (lambda (buffer)
+               (if (eq (with-current-buffer buffer major-mode)  'dired-mode)
+                   nil
+                 buffer))
+             buffer-list)))
+
+(advice-add 'helm-skip-boring-buffers :filter-return 'my-filter-dired-buffers)
