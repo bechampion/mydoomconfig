@@ -1,0 +1,4 @@
+# key:chan
+# name:chan
+# --
+cc := make(chan $0) $1 $2

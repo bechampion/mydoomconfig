@@ -1,0 +1,7 @@
+# key: gofw
+# name: gofuncwait
+# --
+go func(){
+   wg.Wait()
+   close($0)
+}()
