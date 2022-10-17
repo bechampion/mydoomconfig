@@ -68,3 +68,8 @@
 (package! treemacs-perspective :disable t)
 (package! company-terraform)
 (package! nyan-mode)
+(package! groovy-mode)
+(package! cfn-mode)
+(package! helm-grepint)
+(package! dired-sidebar)
+(package! systemd)

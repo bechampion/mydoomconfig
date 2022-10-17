@@ -1,0 +1,4 @@
+# key: mprintf
+# name: printf
+# --
+fmt.Printf("%$0\n", )

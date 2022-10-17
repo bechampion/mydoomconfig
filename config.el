@@ -10,7 +10,7 @@
       "C-S-b" #'revert-buffer)
 (map! :leader
       :desc "Git Grep"
-      "g /" #'helm-projectile-grep)
+      "g /" #'helm-projectile-ack)
 (map! :leader
       :desc "dired jump"
       "f j" #'dired-jump)
@@ -166,3 +166,17 @@
              buffer-list)))
 
 (advice-add 'helm-skip-boring-buffers :filter-return 'my-filter-dired-buffers)
+; Speeds up swiper
+(setq swiper-use-visual-line nil)
+(setq swiper-use-visual-line-p (lambda (a) nil))
+
+
+; My cloning function that also add the project into your current treemacs workpace
+(defun myclone ()
+(interactive)
+(setq repo (read-from-minibuffer "repo?"))
+(setq mydir (read-directory-name "Where to clone?:"))
+(make-directory mydir)
+(setq magit-clone-set-remote.pushDefault t)
+(magit-clone-regular repo mydir nil)
+(treemacs-add-project-to-workspace mydir))
