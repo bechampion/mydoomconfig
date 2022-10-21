@@ -68,7 +68,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-dracula)
 ;; (beacon-mode 0)
 ;; (setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
@@ -180,3 +180,4 @@
 (setq magit-clone-set-remote.pushDefault t)
 (magit-clone-regular repo mydir nil)
 (treemacs-add-project-to-workspace mydir))
+(define-key special-event-map [config-changed-event] 'ignore)
