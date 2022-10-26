@@ -10,7 +10,9 @@
       "C-S-b" #'revert-buffer)
 (map! :leader
       :desc "Git Grep"
-      "g /" #'helm-projectile-ack)
+      "g /" #'fzf-grep-dwim-with-narrowing)
+(map! :desc "Git Grep Comfy"
+      "C-S-g" #'fzf-grep-dwim-with-narrowing)
 (map! :leader
       :desc "dired jump"
       "f j" #'dired-jump)
@@ -90,9 +92,9 @@
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-b") 'magit-branch)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-p") 'magit-pull)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-v") 'vterm-toggle)
+(evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-g") 'ignore)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-buffers-list)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "<escape>") 'ignore)
-
 
 
 
@@ -120,7 +122,6 @@
 (define-key evil-normal-state-map (kbd "C-h") 'ignore)
 (define-key evil-normal-state-map (kbd "C-j") 'ignore)
 (define-key evil-normal-state-map (kbd "C-k") 'ignore)
-(define-key evil-normal-state-map (kbd "C-l") 'avy-goto-line)
 
 (setq which-key-idle-delay 0.7)
 (setq which-key-idle-secondary-delay 0.7)
@@ -136,12 +137,12 @@
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
 (setenv "GOPATH" "/home/jgarcia/Projects/go")
-(setq fzf/args "-x --print-query --margin=1,0 --color"
+(setq fzf/args "-x --print-query --margin=1,0 --color --bind esc:abort"
         fzf/executable "fzf"
         fzf/git-grep-args "-i --line-number %s"
         ;; command used for `fzf-grep-*` functions
         ;; example usage for ripgrep:
-        ;; fzf/grep-command "rg --no-heading -nH"
+        ;;fzf/grep-command "rg --no-heading -nH"
         fzf/grep-command "grep -nrH"
         ;; If nil, the fzf buffer will appear at the top of the window
         fzf/position-bottom 1

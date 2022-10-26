@@ -4,12 +4,23 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy)))
+   '(counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
+ '(warning-suppress-log-types
+   '((go-mode-local-vars-hook)
+     (go-mode-local-vars-hook)
+     (go-mode-local-vars-hook)
+     (defvaralias)))
+ '(warning-suppress-types
+   '((go-mode-local-vars-hook)
+     (go-mode-local-vars-hook)
+     (go-mode-local-vars-hook)
+     (defvaralias))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-string-face ((t (:foreground "#f1fa8c"))))
  '(org-agenda-date-today ((t (:background "#242728" :foreground "#06d8ff" :inverse-video t :box nil :overline t :weight light :height 0.8 :width normal))))
  '(org-date ((t (:inherit default :foreground "#06d8ff"))))
  '(org-level-1 ((t (:inherit variable-pitch :extend t :foreground "#ffac4a" :weight normal :height 1.0))))

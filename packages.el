@@ -73,3 +73,6 @@
 (package! helm-grepint)
 (package! dired-sidebar)
 (package! systemd)
+(unpin! fzf)
+(unpin! treemacs)
+(unpin! lsp-treemacs)
