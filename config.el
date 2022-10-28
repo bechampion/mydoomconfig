@@ -11,8 +11,6 @@
 (map! :leader
       :desc "Git Grep"
       "g /" #'fzf-grep-dwim-with-narrowing)
-(map! :desc "Git Grep Comfy"
-      "C-S-g" #'fzf-grep-dwim-with-narrowing)
 (map! :leader
       :desc "dired jump"
       "f j" #'dired-jump)
