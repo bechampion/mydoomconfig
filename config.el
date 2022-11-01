@@ -91,14 +91,14 @@
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-p") 'magit-pull)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-v") 'vterm-toggle)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-g") 'ignore)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-buffers-list)
+(evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-recentf)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "<escape>") 'ignore)
 
 
 
 (define-key evil-normal-state-map (kbd "C-S-t") 'terraform-format-buffer )
 (define-key evil-normal-state-map (kbd "C-S-c") 'comment-line)
-(define-key evil-normal-state-map (kbd "C-e") 'helm-buffers-list)
+(define-key evil-normal-state-map (kbd "C-e") 'helm-recentf)
 (define-key evil-normal-state-map (kbd "C-f") 'swiper)
 (define-key evil-normal-state-map (kbd "C-S-f") 'fzf-find-file)
 (define-key evil-normal-state-map (kbd "C-S-v") 'vterm-toggle)
