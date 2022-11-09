@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
+   '(auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
  '(warning-suppress-log-types
    '((go-mode-local-vars-hook)
      (go-mode-local-vars-hook)
@@ -20,6 +20,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-dim-other-buffers-face ((t (:background "#191919" :foreground "#696969"))))
  '(font-lock-string-face ((t (:foreground "#f1fa8c"))))
  '(org-agenda-date-today ((t (:background "#242728" :foreground "#06d8ff" :inverse-video t :box nil :overline t :weight light :height 0.8 :width normal))))
  '(org-date ((t (:inherit default :foreground "#06d8ff"))))

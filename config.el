@@ -182,3 +182,4 @@
 (magit-clone-regular repo mydir nil)
 (treemacs-add-project-to-workspace mydir))
 (define-key special-event-map [config-changed-event] 'ignore)
+(auto-dim-other-buffers-mode)
