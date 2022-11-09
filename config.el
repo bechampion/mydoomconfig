@@ -10,7 +10,7 @@
       "C-S-b" #'revert-buffer)
 (map! :leader
       :desc "Git Grep"
-      "g /" #'fzf-grep-dwim-with-narrowing)
+      "g /" #'helm-projectile-ack)
 (map! :leader
       :desc "dired jump"
       "f j" #'dired-jump)
@@ -25,7 +25,8 @@
       "C-t" nil)
 (map! :desc "Swiper"
       :map global-map
-      "C-f" #'swiper)
+      "C-f" #'swiper
+      "C-S-G" #'helm-projectile-ack)
 (map! :desc "CompanyComplete"
       :map global-map
       "C-S-n" #'company-complete)
@@ -52,6 +53,8 @@
       "t s" #'treemacs-switch-workspace
       "t e" #'treemacs-edit-workspaces
       "t p" #'treemacs-projectile)
+
+
 
 
 (use-package dired
@@ -91,14 +94,14 @@
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-p") 'magit-pull)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-v") 'vterm-toggle)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-g") 'ignore)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-recentf)
+(evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-buffers-list)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "<escape>") 'ignore)
 
 
 
 (define-key evil-normal-state-map (kbd "C-S-t") 'terraform-format-buffer )
 (define-key evil-normal-state-map (kbd "C-S-c") 'comment-line)
-(define-key evil-normal-state-map (kbd "C-e") 'helm-recentf)
+(define-key evil-normal-state-map (kbd "C-e") 'helm-buffers-list)
 (define-key evil-normal-state-map (kbd "C-f") 'swiper)
 (define-key evil-normal-state-map (kbd "C-S-f") 'fzf-find-file)
 (define-key evil-normal-state-map (kbd "C-S-v") 'vterm-toggle)
@@ -148,7 +151,6 @@
 ;This is to preserve highlighting on visual mode
 ;You need to do tis in Customize-face seems not to work
 ;;(set-face-attribute 'region nil :inherit nil :background "gray30")
-(nyan-mode)
 (setq lsp-headerline-breadcrumb-enable t)
 (setq lsp-headerline-breadcrumb-segments '(project file symbols))
 (setq lsp-headerline-breadcrumb-icons-enable t)
