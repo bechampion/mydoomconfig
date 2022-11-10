@@ -173,6 +173,21 @@
 
 
 ; My cloning function that also add the project into your current treemacs workpace
+(defun mywindowaction ()
+  (interactive)
+  (if (= (length (window-list)) 1)
+    (winner-undo)
+    (doom/window-maximize-buffer))
+)
+(map! :nv "` f" #'mywindowaction)
+(map! :nv "` h" #'evil-window-left)
+(map! :nv "` l" #'evil-window-right)
+(map! :nv "` j" #'evil-window-bottom)
+(map! :nv "` k" #'evil-window-top)
+(map! :nv "` \"" #'evil-window-split)
+(map! :nv "` %" #'evil-window-vsplit)
+
+
 (defun myclone ()
 (interactive)
 (setq repo (read-from-minibuffer "repo?"))
