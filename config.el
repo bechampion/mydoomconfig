@@ -182,8 +182,8 @@
 (map! :nv "` f" #'mywindowaction)
 (map! :nv "` h" #'evil-window-left)
 (map! :nv "` l" #'evil-window-right)
-(map! :nv "` j" #'evil-window-up)
-(map! :nv "` k" #'evil-window-down)
+(map! :nv "` k" #'evil-window-up)
+(map! :nv "` j" #'evil-window-down)
 (map! :nv "` \"" #'evil-window-split)
 (map! :nv "` %" #'evil-window-vsplit)
 
