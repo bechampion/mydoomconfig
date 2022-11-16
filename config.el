@@ -198,6 +198,3 @@
 (treemacs-add-project-to-workspace mydir))
 (define-key special-event-map [config-changed-event] 'ignore)
 (auto-dim-other-buffers-mode)
-; Copy on select
-(setq x-select-enable-primary t)
-(setq x-select-enable-clipboard t)
