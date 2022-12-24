@@ -69,13 +69,13 @@
         "l" 'dired-find-file ))
 
 
-(setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 16.5 :weight 'normal)
+(setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
 (setq doom-theme 'doom-dracula)
 ;; (beacon-mode 0)
 ;; (setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
-(setq projectile-switch-project-action #'projectile-dired)
+(setq projectile-switch-project-action #'projectile-find-file-dwim)
 (setq doom-themes-treemacs-enable-variable-pitch nil)
 (flycheck-mode 0)
 (setq window-divider-default-right-width 0)
