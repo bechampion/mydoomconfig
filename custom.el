@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(helm-buffer-max-length 40)
+ '(helm-recentf-fuzzy-match t)
  '(package-selected-packages
    '(centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
  '(warning-suppress-log-types
@@ -20,7 +22,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#171d23" :foreground "#f8f8f2" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "DAMA" :family "UbuntuMono Nerd Font Mono"))))
  '(auto-dim-other-buffers-face ((t (:background "#191919" :foreground "#696969"))))
  '(font-lock-string-face ((t (:foreground "#f1fa8c"))))
  '(org-agenda-date-today ((t (:background "#242728" :foreground "#06d8ff" :inverse-video t :box nil :overline t :weight light :height 0.8 :width normal))))
@@ -33,3 +34,4 @@
 (put 'customize-group 'disabled nil)
 (put 'customize-face 'disabled nil)
 (put 'projectile-grep 'disabled nil)
+(put 'customize-variable 'disabled nil)

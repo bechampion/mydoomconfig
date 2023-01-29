@@ -26,7 +26,9 @@
 (map! :desc "Swiper"
       :map global-map
       "C-f" #'swiper
-      "C-S-G" #'helm-projectile-ack)
+      "C-S-G" #'helm-projectile-ack
+      "C-S-D" #'ackincurrentdir
+      )
 (map! :desc "CompanyComplete"
       :map global-map
       "C-S-n" #'company-complete)
@@ -54,6 +56,9 @@
       "t e" #'treemacs-edit-workspaces
       "t p" #'treemacs-projectile)
 
+(map! :desc "Recent FZF"
+      :leader
+      "f r" #'helm-recentf)
 
 
 
@@ -71,9 +76,9 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-dracula)
-;; (beacon-mode 0)
-;; (setq beacon-color "#ff9da4")
+(setq doom-theme 'doom-one)
+(beacon-mode 1)
+(setq beacon-color "#ff9da4")
 (treemacs-icons-dired-mode 1)
 (setq projectile-switch-project-action #'projectile-find-file-dwim)
 (setq doom-themes-treemacs-enable-variable-pitch nil)
@@ -188,6 +193,10 @@
 (map! :nv "` %" #'evil-window-vsplit)
 
 
+(defun ackincurrentdir()
+(interactive)
+(helm-projectile-ack default-directory)
+)
 (defun myclone ()
 (interactive)
 (setq repo (read-from-minibuffer "repo?"))
@@ -197,4 +206,5 @@
 (magit-clone-regular repo mydir nil)
 (treemacs-add-project-to-workspace mydir))
 (define-key special-event-map [config-changed-event] 'ignore)
-(doom/set-frame-opacity 95)
+(doom/set-frame-opacity 100)
+;; (auto-dim-other-buffers-mode)
