@@ -27,7 +27,7 @@
       :map global-map
       "C-f" #'swiper
       "C-S-G" #'helm-projectile-ack
-      "C-S-D" #'ackincurrentdir
+      "C-M-G" #'ackincurrentdir
       )
 (map! :desc "CompanyComplete"
       :map global-map
@@ -109,7 +109,7 @@
 (define-key evil-normal-state-map (kbd "C-e") 'helm-buffers-list)
 (define-key evil-normal-state-map (kbd "C-f") 'swiper)
 (define-key evil-normal-state-map (kbd "C-S-f") 'fzf-find-file)
-(define-key evil-normal-state-map (kbd "C-S-H") 'findfileincurrentdir)
+(define-key evil-normal-state-map (kbd "C-M-f") 'findfileincurrentdir)
 (define-key evil-normal-state-map (kbd "C-S-v") 'vterm-toggle)
 (define-key evil-normal-state-map (kbd "C-l") 'magit-log)
 (define-key evil-normal-state-map (kbd "C-s") 'magit-status)
