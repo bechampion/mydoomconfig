@@ -1,0 +1,5 @@
+# key: print
+# name: print
+# condition: t
+# --
+print($0)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rrr
+# uuid: rrr
+# key: rrr
+# condition: t
+# --
+[x for x in range(10)]

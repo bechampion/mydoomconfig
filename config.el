@@ -1,3 +1,9 @@
+(map! :desc "Find and Grep"
+      :leader
+      "g g" #'ackincurrentdir
+      "g d" #'helm-projectile-ack
+      "f f" #'fzf-find-file
+      "f d" #'findfileincurrentdir)
 (map! :desc "company"
       "C-S-n" #'company-complete)
 (map! :desc "Win action"
@@ -212,4 +218,6 @@
 (treemacs-add-project-to-workspace mydir))
 (define-key special-event-map [config-changed-event] 'ignore)
 (doom/set-frame-opacity 100)
+(setq helm-projectile-fuzzy-match nil)
+
 ;; (auto-dim-other-buffers-mode)
