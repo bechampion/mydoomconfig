@@ -1,7 +1,7 @@
 (map! :desc "Find and Grep"
       :leader
-      "g g" #'ackincurrentdir
-      "g d" #'helm-projectile-ack
+      "g d" #'ackincurrentdir
+      "g g" #'helm-projectile-ack
       "f f" #'fzf-find-file
       "f d" #'findfileincurrentdir)
 (map! :desc "company"
