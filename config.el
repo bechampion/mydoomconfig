@@ -223,12 +223,6 @@
 (define-key special-event-map [config-changed-event] 'ignore)
 (doom/set-frame-opacity 100)
 (setq helm-projectile-fuzzy-match nil)
-(setq doom-modeline-icon t)
-(setq doom-modeline-major-mode-icon t)
-(setq doom-modeline-major-mode-color-icon t)
-(setq doom-modeline-buffer-state-icon t)
-(setq doom-modeline-buffer-modification-icon t)
-(setq doom-modeline-time-icon t)
 
 
 ;; (auto-dim-other-buffers-mode)
