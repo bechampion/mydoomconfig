@@ -2,8 +2,8 @@
       :leader
       "g d" #'ackincurrentdir
       "g g" #'helm-projectile-ack
-      "f f" #'fzf-find-file
-      "f d" #'findfileincurrentdir)
+      "f f" #'helm-projectile-find-file-dwim
+      "f d" #'helm-find-files)
 (map! :desc "company"
       "C-S-n" #'company-complete)
 (map! :desc "Win action"
