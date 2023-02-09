@@ -65,6 +65,11 @@
 (map! :desc "Recent FZF"
       :leader
       "f r" #'helm-recentf)
+(map! :desc "Kubernetes"
+      :leader
+      "k p" #'kubernetes-display-pod
+      "k i" #'kubernetes-display-ingress
+      "k s" #'kubernetes-display-service)
 
 
 
@@ -74,11 +79,10 @@
 :bind (("C-x C-j" . dired-jump))
 :custom ((dired-listing-switches ""))
 :config
-(evil-collection-define-key 'normal 'dired-mode-map
-        "h" 'dired-up-directory
-        "n" 'find-file
-        "l" 'dired-find-file ))
-
+ (evil-collection-define-key 'normal 'dired-mode-map
+         "h" 'dired-up-directory
+         "n" 'find-file
+         "l" 'dired-find-file ))
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
@@ -98,7 +102,7 @@
 (helm-adaptive-mode 1)
 ;; (company-mode 1)
 
-
+(evil-define-key 'dired dired-mode-map (kbd "h") 'dired-up-directory)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-f") 'swiper)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-s") 'magit-status)
 (evil-define-key 'treemacs treemacs-mode-map (kbd "C-b") 'magit-branch)
@@ -219,5 +223,12 @@
 (define-key special-event-map [config-changed-event] 'ignore)
 (doom/set-frame-opacity 100)
 (setq helm-projectile-fuzzy-match nil)
+(setq doom-modeline-icon t)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-state-icon t)
+(setq doom-modeline-buffer-modification-icon t)
+(setq doom-modeline-time-icon t)
+
 
 ;; (auto-dim-other-buffers-mode)
