@@ -1,14 +1,26 @@
-(map! :desc "Find and Grep"
+(map! :desc "Save file fast"
       :leader
-      "g d" #'ackincurrentdir
-      "g g" #'helm-projectile-ack
-      "f f" #'helm-projectile-find-file-dwim
+      :o
+      "s s" #'save-buffer)
+(map! :desc "Grep in currentDir"
+      :leader
+      "g d" #'ackincurrentdir)
+(map! :desc "Grep in project"
+      :leader
+      "g g" #'helm-projectile-ack)
+(map! :desc "Files in currentDir"
+      :leader
       "f d" #'helm-find-files)
+(map! :desc "Files in project"
+      :leader
+      "f f" #'helm-projectile-find-file-dwim)
 (map! :desc "company"
       "C-S-n" #'company-complete)
-(map! :desc "Win action"
+(map! :desc "Window Vsplit"
       :leader
-      "w /" #'evil-window-vsplit
+      "w /" #'evil-window-vsplit)
+(map! :desc "Window split"
+      :leader
       "w -" #'evil-window-split)
 (map! :desc "Magit "
       "C-s" #'magit-status
@@ -48,10 +60,11 @@
       :map swiper-map
       "C-j" #'ivy-next-line
       "C-k" #'ivy-previous-line)
-(map! :desc "magit blame"
+(map! :desc "Git blame"
       :leader
-      "g b" #'magit-blame-addition
-      "g l L" #'git-link
+      "g b" #'magit-blame-addition)
+(map! :desc "Git link"
+      :leader
       "g l" #'git-link)
 (map! :desc "Visual select word"
       :leader
