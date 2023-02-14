@@ -237,5 +237,5 @@
 (doom/set-frame-opacity 100)
 (setq helm-projectile-fuzzy-match nil)
 
-
+(setq doom-modeline-vcs-max-length 60)
 ;; (auto-dim-other-buffers-mode)

@@ -76,6 +76,7 @@
 (package! kubernetes)
 (package! kubernetes-helm)
 (package! auto-dim-other-buffers)
+(package! password-store)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
