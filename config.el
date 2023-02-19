@@ -216,7 +216,21 @@
 (map! :nv "` \"" #'evil-window-split)
 (map! :nv "` %" #'evil-window-vsplit)
 
+(defun saveFaster()
+(interactive)
+(if (equal major-mode "magit")
+    (with-editor-finish)
 
+  (save-buffer)
+)
+(print "saveFaster done..")
+(print major-mode)
+)
+
+(defun findfileincurrentdir()
+(interactive)
+(fzf-find-file default-directory)
+)
 (defun findfileincurrentdir()
 (interactive)
 (fzf-find-file default-directory)
@@ -239,3 +253,4 @@
 
 (setq doom-modeline-vcs-max-length 60)
 ;; (auto-dim-other-buffers-mode)
+(setq recentf-max-saved-items 400)
