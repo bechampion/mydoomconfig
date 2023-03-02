@@ -13,7 +13,7 @@
       "f d" #'helm-find-files)
 (map! :desc "Files in project"
       :leader
-      "f f" #'helm-projectile-find-file-dwim)
+      "f f" #'helm-projectile-find-file)
 (map! :desc "company"
       "C-S-n" #'company-complete)
 (map! :desc "Window Vsplit"
