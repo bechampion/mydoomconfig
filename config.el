@@ -68,7 +68,8 @@
       "g b" #'magit-blame-addition)
 (map! :desc "Git link"
       :leader
-      "g l" #'git-link)
+      "g l" #'git-link
+      "g L" #'git-link-commit)
 (map! :desc "Visual select word"
       :leader
       "v" #'er/expand-region)
@@ -104,7 +105,7 @@
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
 (setq doom-theme 'doom-one)
 (beacon-mode 1)
-(setq beacon-color "#ff9da4")
+(setq beacon-color "#7CFC00")
 (treemacs-icons-dired-mode 1)
 (setq projectile-switch-project-action #'projectile-find-file-dwim)
 (setq doom-themes-treemacs-enable-variable-pitch nil)
