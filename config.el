@@ -1,3 +1,6 @@
+(map! :desc "Some org things"
+      :leader
+      "d d" #'orgdate)
 (map! :desc "Save file fast"
       :leader
       :o
@@ -87,15 +90,15 @@
 
 
 (use-package dired
-:ensure nil
-:commands (dired dired-jump)
-:bind (("C-x C-j" . dired-jump))
-:custom ((dired-listing-switches ""))
-:config
- (evil-collection-define-key 'normal 'dired-mode-map
-         "h" 'dired-up-directory
-         "n" 'find-file
-         "l" 'dired-find-file ))
+  :ensure nil
+  :commands (dired dired-jump)
+  :bind (("C-x C-j" . dired-jump))
+  :custom ((dired-listing-switches ""))
+  :config
+  (evil-collection-define-key 'normal 'dired-mode-map
+    "h" 'dired-up-directory
+    "n" 'find-file
+    "l" 'dired-find-file ))
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
@@ -168,17 +171,17 @@
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
 (setenv "GOPATH" "/home/jgarcia/Projects/go")
 (setq fzf/args "-x --print-query --margin=1,0 --color --bind esc:abort"
-        fzf/executable "fzf"
-        fzf/git-grep-args "-i --line-number %s"
-        ;; command used for `fzf-grep-*` functions
-        ;; example usage for ripgrep:
-        ;;fzf/grep-command "rg --no-heading -nH"
-        fzf/grep-command "grep -nrH"
-        ;; If nil, the fzf buffer will appear at the top of the window
-        fzf/position-bottom 1
-        fzf/window-height 20)
-;This is to preserve highlighting on visual mode
-;You need to do tis in Customize-face seems not to work
+      fzf/executable "fzf"
+      fzf/git-grep-args "-i --line-number %s"
+      ;; command used for `fzf-grep-*` functions
+      ;; example usage for ripgrep:
+      ;;fzf/grep-command "rg --no-heading -nH"
+      fzf/grep-command "grep -nrH"
+      ;; If nil, the fzf buffer will appear at the top of the window
+      fzf/position-bottom 1
+      fzf/window-height 20)
+                                        ;This is to preserve highlighting on visual mode
+                                        ;You need to do tis in Customize-face seems not to work
 ;;(set-face-attribute 'region nil :inherit nil :background "gray30")
 (setq lsp-headerline-breadcrumb-enable t)
 (setq lsp-headerline-breadcrumb-segments '(project file symbols))
@@ -186,7 +189,7 @@
 (setq display-line-numbers-type 'relative)
 (setq treemacs-show-cursor t)
 (setq treemacs-follow-mode t)
-; This is to ignore dired on helm-recent buffers
+                                        ; This is to ignore dired on helm-recent buffers
 (defun my-filter-dired-buffers (buffer-list)
   (delq nil (mapcar
              (lambda (buffer)
@@ -196,18 +199,18 @@
              buffer-list)))
 
 (advice-add 'helm-skip-boring-buffers :filter-return 'my-filter-dired-buffers)
-; Speeds up swiper
+                                        ; Speeds up swiper
 (setq swiper-use-visual-line nil)
 (setq swiper-use-visual-line-p (lambda (a) nil))
 
 
-; My cloning function that also add the project into your current treemacs workpace
+                                        ; My cloning function that also add the project into your current treemacs workpace
 (defun mywindowaction ()
   (interactive)
   (if (= (length (window-list)) 1)
-    (winner-undo)
+      (winner-undo)
     (doom/window-maximize-buffer))
-)
+  )
 (map! :nv "` f" #'mywindowaction)
 (map! :nv "` h" #'evil-window-left)
 (map! :nv "` l" #'evil-window-right)
@@ -217,36 +220,36 @@
 (map! :nv "` %" #'evil-window-vsplit)
 
 (defun saveFaster()
-(interactive)
-(if (equal major-mode "magit")
-    (with-editor-finish)
+  (interactive)
+  (if (equal major-mode "magit")
+      (with-editor-finish)
 
-  (save-buffer)
-)
-(print "saveFaster done..")
-(print major-mode)
-)
+    (save-buffer)
+    )
+  (print "saveFaster done..")
+  (print major-mode)
+  )
 
 (defun findfileincurrentdir()
-(interactive)
-(fzf-find-file default-directory)
-)
+  (interactive)
+  (fzf-find-file default-directory)
+  )
 (defun findfileincurrentdir()
-(interactive)
-(fzf-find-file default-directory)
-)
+  (interactive)
+  (fzf-find-file default-directory)
+  )
 (defun ackincurrentdir()
-(interactive)
-(helm-projectile-ack default-directory)
-)
+  (interactive)
+  (helm-projectile-ack default-directory)
+  )
 (defun myclone ()
-(interactive)
-(setq repo (read-from-minibuffer "repo?"))
-(setq mydir (read-directory-name "Where to clone?:"))
-(make-directory mydir)
-(setq magit-clone-set-remote.pushDefault t)
-(magit-clone-regular repo mydir nil)
-(treemacs-add-project-to-workspace mydir))
+  (interactive)
+  (setq repo (read-from-minibuffer "repo?"))
+  (setq mydir (read-directory-name "Where to clone?:"))
+  (make-directory mydir)
+  (setq magit-clone-set-remote.pushDefault t)
+  (magit-clone-regular repo mydir nil)
+  (treemacs-add-project-to-workspace mydir))
 (define-key special-event-map [config-changed-event] 'ignore)
 (doom/set-frame-opacity 100)
 (setq helm-projectile-fuzzy-match nil)
@@ -254,3 +257,13 @@
 (setq doom-modeline-vcs-max-length 60)
 ;; (auto-dim-other-buffers-mode)
 (setq recentf-max-saved-items 400)
+(defun orgdate()
+  (interactive)
+  (org-insert-heading)
+(org-insert-time-stamp (current-time))
+  (end-of-line)
+  (newline-and-indent)
+  (insert  "- ")
+  (evil-insert nil)
+)
+(setq display-line-numbers-type nil)

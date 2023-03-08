@@ -6,7 +6,7 @@
  '(helm-buffer-max-length 40)
  '(helm-recentf-fuzzy-match t)
  '(package-selected-packages
-   '(centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
+   '(standard-themes color-theme-modern centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
  '(warning-suppress-log-types
    '((go-mode-local-vars-hook)
      (go-mode-local-vars-hook)

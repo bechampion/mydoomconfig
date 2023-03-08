@@ -78,6 +78,8 @@
 (package! auto-dim-other-buffers)
 (package! password-store)
 (package! diffview)
+(package! cyberpunk-theme)
+(package! cyberpunk-2019-theme)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
