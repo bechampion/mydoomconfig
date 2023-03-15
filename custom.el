@@ -3,10 +3,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("a138ec18a6b926ea9d66e61aac28f5ce99739cf38566876dc31e29ec8757f6e2" "2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" "6945dadc749ac5cbd47012cad836f92aea9ebec9f504d32fe89a956260773ca4" default))
  '(helm-buffer-max-length 40)
  '(helm-recentf-fuzzy-match t)
  '(package-selected-packages
-   '(standard-themes color-theme-modern centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
+   '(light-soap-theme standard-themes color-theme-modern centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
  '(warning-suppress-log-types
    '((go-mode-local-vars-hook)
      (go-mode-local-vars-hook)

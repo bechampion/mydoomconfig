@@ -80,6 +80,7 @@
 (package! diffview)
 (package! cyberpunk-theme)
 (package! cyberpunk-2019-theme)
+(package! light-soap-theme)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
