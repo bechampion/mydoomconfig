@@ -1,3 +1,9 @@
+(map! :desc "7030"
+      :leader
+      "w w" #'window-resize-to-70-percent)
+(map! :desc "Boomarks"
+      :leader
+      "<RET>" #'bookmark-bmenu-list)
 (map! :desc "Some org things"
       :leader
       "d d" #'orgdate)
@@ -49,6 +55,10 @@
       "C-f" #'swiper
       "C-S-G" #'helm-projectile-ack
       "C-M-G" #'ackincurrentdir
+      )
+(map! :desc "dim"
+      :map global-map
+      "C-S-d" #'auto-dim-other-buffers-mode
       )
 (map! :desc "CompanyComplete"
       :map global-map
@@ -106,7 +116,7 @@
 (setq doom-theme 'doom-dracula)
 (beacon-mode 1)
 (setq beacon-color "#50fa7b")
-(treemacs-icons-dired-mode 1)
+;; (treemacs-icons-dired-mode 1)
 (setq projectile-switch-project-action #'projectile-find-file-dwim)
 (setq doom-themes-treemacs-enable-variable-pitch nil)
 (flycheck-mode 0)
@@ -120,14 +130,14 @@
 ;; (company-mode 1)
 
 (evil-define-key 'dired dired-mode-map (kbd "h") 'dired-up-directory)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-f") 'swiper)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-s") 'magit-status)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-b") 'magit-branch)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-p") 'magit-pull)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-v") 'vterm-toggle)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-g") 'ignore)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-buffers-list)
-(evil-define-key 'treemacs treemacs-mode-map (kbd "<escape>") 'ignore)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-f") 'swiper)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-s") 'magit-status)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-b") 'magit-branch)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-p") 'magit-pull)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-v") 'vterm-toggle)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-S-g") 'ignore)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "C-e") 'helm-buffers-list)
+;; (evil-define-key 'treemacs treemacs-mode-map (kbd "<escape>") 'ignore)
 
 
 
@@ -187,7 +197,6 @@
 (setq lsp-headerline-breadcrumb-enable t)
 (setq lsp-headerline-breadcrumb-segments '(project file symbols))
 (setq lsp-headerline-breadcrumb-icons-enable t)
-(setq display-line-numbers-type 'relative)
 (setq treemacs-show-cursor t)
 (setq treemacs-follow-mode t)
                                         ; This is to ignore dired on helm-recent buffers
@@ -267,4 +276,8 @@
   (insert  "- ")
   (evil-insert nil)
 )
-(setq display-line-numbers-type nil)
+;; (setq display-line-numbers-type nil)
+(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+(defun window-resize-to-70-percent ()
+  (interactive)
+  (window-resize nil (- (truncate (* 0.6 (frame-width))) (window-width)) t))
