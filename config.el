@@ -16,13 +16,15 @@
       "g d" #'ackincurrentdir)
 (map! :desc "Grep in project"
       :leader
-      "g g" #'helm-projectile-ack)
+      "g g" #'helm-projectile-ack
+      "g a" #'grepall)
 (map! :desc "Files in currentDir"
       :leader
       "f d" #'helm-find-files)
 (map! :desc "Files in project"
       :leader
-      "f f" #'helm-projectile-find-file)
+      "f f" #'helm-projectile-find-file
+      "f a" #'findall)
 (map! :desc "company"
       "C-S-n" #'company-complete)
 (map! :desc "Window Vsplit"
@@ -281,11 +283,16 @@
 (defun window-resize-to-70-percent ()
   (interactive)
   (window-resize nil (- (truncate (* 0.6 (frame-width))) (window-width)) t))
+(defun grepall ()
+  (interactive)
+  (setq helm-rg--current-dir "/home/jgarcia/Projects/disney")
+  (helm-rg())
+  )
 (defun findall ()
     (interactive)
-  (find-file (helm :sources (helm-build-sync-source "test"
+  (find-file (helm :sources (helm-build-sync-source "FindAll in ~/Projects/disney"
                  :candidates (split-string (shell-command-to-string "find ~/Projects/disney/") "\n")
-                 :fuzzy-match t)
+                 :fuzzy-match nil)
       :buffer "*helm test*")))
 ;; This is supposed to make the cursor a bit faster ...i can't tell to be fair
 (setq doom-modeline-enable-word-count nil)
