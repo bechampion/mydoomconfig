@@ -281,3 +281,12 @@
 (defun window-resize-to-70-percent ()
   (interactive)
   (window-resize nil (- (truncate (* 0.6 (frame-width))) (window-width)) t))
+(defun findall ()
+    (interactive)
+  (find-file (helm :sources (helm-build-sync-source "test"
+                 :candidates (split-string (shell-command-to-string "find ~/Projects/disney/") "\n")
+                 :fuzzy-match t)
+      :buffer "*helm test*")))
+;; This is supposed to make the cursor a bit faster ...i can't tell to be fair
+(setq doom-modeline-enable-word-count nil)
+(setq auto-window-vscroll nil)

@@ -84,6 +84,7 @@
 (package! all-the-icons)
 (package! all-the-icons-dired)
 (package! catppuccin-theme)
+(package! run-command)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
