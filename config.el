@@ -291,7 +291,7 @@
 (defun findall ()
     (interactive)
   (find-file (helm :sources (helm-build-sync-source "FindAll in ~/Projects/disney"
-                 :candidates (split-string (shell-command-to-string "find ~/Projects/disney/") "\n")
+                 :candidates (split-string (shell-command-to-string "find ~/Projects/disney/ -not -path '*/.*'") "\n")
                  :fuzzy-match nil)
       :buffer "*helm test*")))
 ;; This is supposed to make the cursor a bit faster ...i can't tell to be fair
