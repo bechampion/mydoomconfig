@@ -7,10 +7,11 @@
 (map! :desc "Some org things"
       :leader
       "d d" #'orgdate)
-(map! :desc "Save file fast"
+(map! :desc "Save file fast and quit"
       :leader
       :o
-      "s s" #'save-buffer)
+      "s s" #'save-buffer
+      "q q" #'delete-window)
 (map! :desc "Grep in currentDir"
       :leader
       "g d" #'ackincurrentdir)
@@ -297,3 +298,4 @@
 ;; This is supposed to make the cursor a bit faster ...i can't tell to be fair
 (setq doom-modeline-enable-word-count nil)
 (setq auto-window-vscroll nil)
+(setq display-line-numbers-type 'relative)

@@ -85,6 +85,7 @@
 (package! all-the-icons-dired)
 (package! catppuccin-theme)
 (package! run-command)
+(package! git-auto-commit-mode)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
