@@ -299,3 +299,5 @@
 (setq doom-modeline-enable-word-count nil)
 (setq auto-window-vscroll nil)
 (setq display-line-numbers-type 'relative)
+(setq projectile-generic-command
+  "find . -type f ! -ipath '.git*' ! -ipath '*/.git*' -print0")
