@@ -299,5 +299,8 @@
 (setq doom-modeline-enable-word-count nil)
 (setq auto-window-vscroll nil)
 (setq display-line-numbers-type 'relative)
+(after! projectile
+;; I don't know wether this is doing something at all ,   <space> f f seems to respect .gitignore ,  so probs that's a good practice , but it would be a pain
 (setq projectile-generic-command
-  "find . -type f ! -ipath '.git*' ! -ipath '*/.git*' -print0")
+  "find . -type f ! -ipath '*.git*' ! -ipath '*/.git*' -print0")
+)
