@@ -25,6 +25,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-dim-other-buffers-face ((t (:background "#191919" :foreground "#696969"))))
+ '(cursor ((t (:background "deep pink"))))
  '(line-number ((t (:inherit default :foreground "#6272a4" :slant normal :weight normal))))
  '(line-number-current-line ((t (:inherit (hl-line default) :foreground "#f8f8f2" :slant normal :weight normal))))
  '(org-agenda-date-today ((t (:background "#242728" :foreground "#06d8ff" :inverse-video t :box nil :overline t :weight light :height 0.8 :width normal))))
