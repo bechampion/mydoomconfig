@@ -116,7 +116,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-one)
 (beacon-mode 1)
 (setq beacon-color "#50fa7b")
 ;; (treemacs-icons-dired-mode 1)
@@ -304,3 +304,4 @@
 (setq projectile-generic-command
   "find . -type f ! -ipath '*.git*' ! -ipath '*/.git*' -print0")
 )
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))

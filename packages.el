@@ -86,6 +86,7 @@
 (package! catppuccin-theme)
 (package! run-command)
 (package! git-auto-commit-mode)
+(package! org-bullets)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
