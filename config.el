@@ -116,7 +116,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-dracula)
 (beacon-mode 1)
 (setq beacon-color "#50fa7b")
 ;; (treemacs-icons-dired-mode 1)
