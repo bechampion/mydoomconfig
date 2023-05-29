@@ -156,7 +156,7 @@
 (define-key evil-normal-state-map (kbd "C-b") 'magit-branch)
 (define-key evil-normal-state-map (kbd "C-S-b") 'revert-buffer)
 (define-key evil-normal-state-map (kbd "C-S-n") 'company-complete)
-(define-key evil-normal-state-map (kbd "C-S-l") 'magit-log-head)
+(define-key evil-normal-state-map (kbd "C-S-l") 'magit-log-all)
 (define-key evil-normal-state-map (kbd "C-S-p") 'magit-pull)
 (define-key evil-visual-state-map (kbd "H") 'ignore)
 (define-key evil-visual-state-map (kbd "L") 'ignore)
