@@ -114,7 +114,7 @@
     "n" 'find-file
     "l" 'dired-find-file ))
 
-(setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
+(setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 18.0 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
 (setq doom-theme 'doom-dracula)
 (beacon-mode 1)
@@ -305,4 +305,8 @@
   "find . -type f ! -ipath '*.git*' ! -ipath '*/.git*' -print0")
 )
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+<<<<<<< HEAD
 (setq org-startup-folded t)
+=======
+(epa-file-enable)
+>>>>>>> 9c68936 (Adding some changes)
