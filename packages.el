@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! swiper)
-(package! beacon)
+;; (package! beacon)
 (package! fzf)
 (package! swiper-helm)
 (package! darkokai-theme)
