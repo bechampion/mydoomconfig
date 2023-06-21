@@ -87,6 +87,7 @@
 (package! run-command)
 (package! git-auto-commit-mode)
 (package! org-bullets)
+(package! golden-ratio)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)

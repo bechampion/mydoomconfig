@@ -1,6 +1,6 @@
-(map! :desc "7030"
-      :leader
-      "w w" #'window-resize-to-70-percent)
+;; (map! :desc "7030"
+;;       :leader
+;;       "w w" #'window-resize-to-70-percent)
 (map! :desc "Boomarks"
       :leader
       "<RET>" #'bookmark-bmenu-list)
@@ -307,3 +307,5 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 (setq org-startup-folded t)
 (epa-file-enable)
+(golden-ratio-mode 1)
+(setq golden-ratio-extra-commands '(evil-window-left evil-window-right evil-window-down evil-window-up magit-show-commit))
