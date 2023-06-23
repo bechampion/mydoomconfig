@@ -91,6 +91,7 @@
 (package! go-dlv)
 (package! dap-mode)
 (package! evil-fringe-mark)
+(package! helm-evil-markers)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
