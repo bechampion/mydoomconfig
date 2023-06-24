@@ -309,6 +309,3 @@
 (epa-file-enable)
 (golden-ratio-mode 1)
 (setq golden-ratio-extra-commands '(evil-window-left evil-window-right evil-window-down evil-window-up magit-show-commit))
-(require 'evil-fringe-mark)
-(global-evil-fringe-mark-mode)
-(helm-evil-markers-toggle)
