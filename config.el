@@ -101,7 +101,8 @@
       "k i" #'kubernetes-display-ingress
       "k s" #'kubernetes-display-service)
 
-
+(map! :leader
+      "b x" #'doom/switch-to-scratch-buffer)
 
 (use-package dired
   :ensure nil
