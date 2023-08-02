@@ -8,7 +8,7 @@
  '(helm-buffer-max-length 40)
  '(helm-recentf-fuzzy-match t)
  '(package-selected-packages
-   '(use-package run-command helm-helm-commands light-soap-theme standard-themes color-theme-modern centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
+   '(gradle-mode use-package run-command helm-helm-commands light-soap-theme standard-themes color-theme-modern centaur-tabs real-auto-save dimmer auto-dim-other-buffers ranger dired-ranger deadgrep counsel systemd neotree modus-themes xhair cfn-mode scala-mode treemacs-evil lsp-java avy nyan-mode vterm transpose-frame spinner rainbow-blocks mixed-pitch markdown-preview-eww markdown-mode lv ivy f ewal-doom-themes dirvish company-fuzzy))
  '(warning-suppress-log-types
    '((go-mode-local-vars-hook)
      (go-mode-local-vars-hook)
