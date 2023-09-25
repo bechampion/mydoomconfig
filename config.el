@@ -108,7 +108,7 @@
   :ensure nil
   :commands (dired dired-jump)
   :bind (("C-x C-j" . dired-jump))
-  :custom ((dired-listing-switches ""))
+  :custom ((dired-listing-switches "-la"))
   :config
   (evil-collection-define-key 'normal 'dired-mode-map
     "h" 'dired-up-directory
@@ -308,9 +308,9 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 (setq org-startup-folded t)
 (epa-file-enable)
-(golden-ratio-mode 1)
-(setenv "JAVA_HOME" "/usr")
-(setq golden-ratio-extra-commands '(evil-window-left evil-window-right evil-window-down evil-window-up magit-show-commit))
+;; (golden-ratio-mode 1)
+(setenv "JAVA_HOME" "/home/jgarcia/.jabba/jdk/openjdk@19.0.2")
+;; (setq golden-ratio-extra-commands '(evil-window-left evil-window-right evil-window-down evil-window-up magit-show-commit))
 (setq lsp-java-maven-download-sources nil)
 (setq lsp-java-eclipse-download-sources t)
 (setq lsp-java-import-gradle-enabled t)
@@ -318,4 +318,4 @@
 (setq lsp-java-import-gradle-java-home "/home/jgarcia/.jabba/jdk/openjdk@11.0.15")
 (setq lsp-java-import-gradle-offline-enabled t)
 (setq lsp-java-import-maven-offline-enabled t)
-(setq lsp-java-configuration-runtimes '[(:name "JavaSE-1.8" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15")(:name "JavaSE-11" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15":default t)])
+(setq lsp-java-configuration-runtimes '[(:name "JavaSE-19" :paht "/home/jgarcia/.jabba/jdk/openjdk@19.0.2")(:name "JavaSE-1.8" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15")(:name "JavaSE-11" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15":default t)])
