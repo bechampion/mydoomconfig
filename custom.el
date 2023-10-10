@@ -34,6 +34,7 @@
  '(org-level-2 ((t (:extend t :foreground "light green" :height 1.0))))
  '(org-level-3 ((t (:extend t :foreground "#06d8ff" :height 1.0))))
  '(org-level-4 ((t (:extend t :foreground "#E6DB74" :height 1.0))))
+ '(org-level-5 ((t (:extend t))))
  '(region ((t (:inherit nil :extend t :background "gray30")))))
 (put 'customize-group 'disabled nil)
 (put 'customize-face 'disabled nil)
