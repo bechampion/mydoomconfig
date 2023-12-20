@@ -117,7 +117,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 13.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-tomorrow-night)
 ;; (beacon-mode 1)
 ;; (setq beacon-color "#50fa7b")
 ;; (treemacs-icons-dired-mode 1)
@@ -184,7 +184,8 @@
 (define-key evil-visual-state-map (kbd "<down>") 'ignore)
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
-(setenv "GOPATH" "/home/jgarcia/Projects/go")
+(setenv "GOPATH" "/home/jgarcia/go")
+(setenv "GO111MODULE" "off")
 (setq fzf/args "-x --print-query --margin=1,0 --color --bind esc:abort"
       fzf/executable "fzf"
       fzf/git-grep-args "-i --line-number %s"
@@ -319,3 +320,4 @@
 (setq lsp-java-import-gradle-offline-enabled t)
 (setq lsp-java-import-maven-offline-enabled t)
 (setq lsp-java-configuration-runtimes '[(:name "JavaSE-19" :paht "/home/jgarcia/.jabba/jdk/openjdk@19.0.2")(:name "JavaSE-1.8" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15")(:name "JavaSE-11" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15":default t)])
+(setq org-confirm-babel-evaluate t)

@@ -90,6 +90,7 @@
 (package! golden-ratio)
 (package! go-dlv)
 (package! dap-mode)
+(package! ellama)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
