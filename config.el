@@ -117,7 +117,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 11.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-vibrant)
 ;; (beacon-mode 1)
 ;; (setq beacon-color "#50fa7b")
 ;; (treemacs-icons-dired-mode 1)
@@ -185,7 +185,7 @@
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
 (setenv "GOPATH" "/home/jgarcia/go")
-(setenv "GO111MODULE" "off")
+(setenv "GO111MODULE" "on")
 (setq fzf/args "-x --print-query --margin=1,0 --color --bind esc:abort"
       fzf/executable "fzf"
       fzf/git-grep-args "-i --line-number %s"
