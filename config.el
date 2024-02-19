@@ -321,3 +321,5 @@
 (setq lsp-java-import-maven-offline-enabled t)
 (setq lsp-java-configuration-runtimes '[(:name "JavaSE-19" :paht "/home/jgarcia/.jabba/jdk/openjdk@19.0.2")(:name "JavaSE-1.8" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15")(:name "JavaSE-11" :path "/home/jgarcia/.jabba/jdk/openjdk@11.0.15":default t)])
 (setq org-confirm-babel-evaluate t)
+(setq tree-sitter-mode t)
+(setq tree-sitter-hl-mode t)

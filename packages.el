@@ -91,6 +91,8 @@
 (package! go-dlv)
 (package! dap-mode)
 (package! ellama)
+(package! tree-sitter)
+(package! tree-sitter-langs)
 (unpin! fzf)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)
