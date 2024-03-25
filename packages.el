@@ -94,5 +94,6 @@
 (package! tree-sitter)
 (package! tree-sitter-langs)
 (unpin! fzf)
+(package! ox-slack)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)

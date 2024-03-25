@@ -25,7 +25,8 @@
 (map! :desc "Files in project"
       :leader
       "f f" #'helm-projectile-find-file
-      "f a" #'findall)
+      "f a" #'findall
+      "f s" #'findsys)
 (map! :desc "company"
       "C-S-n" #'company-complete)
 (map! :desc "Window Vsplit"
@@ -117,7 +118,7 @@
 
 (setq doom-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 11.5 :weight 'normal)
       doom-big-font (font-spec :family "UbuntuMono Nerd Font Mono" :size 24))
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-tokyo-night)
 ;; (beacon-mode 1)
 ;; (setq beacon-color "#50fa7b")
 ;; (treemacs-icons-dired-mode 1)
@@ -170,6 +171,13 @@
 (define-key evil-normal-state-map (kbd "C-h") 'ignore)
 (define-key evil-normal-state-map (kbd "C-j") 'ignore)
 (define-key evil-normal-state-map (kbd "C-k") 'ignore)
+(define-key evil-normal-state-map (kbd "x") 'delete-char)
+(define-key evil-normal-state-map (kbd "D") 'delete-region)
+;; (define-key evil-normal-state-map (kbd "d") 'evil-delete-without-register)
+
+(evil-define-operator evil-delete-without-register (beg end type yank-handler)
+  (interactive "<R><y>")
+  (evil-delete beg end type ?\_ yank-handler))
 
 (setq which-key-idle-delay 0.7)
 (setq which-key-idle-secondary-delay 0.7)
@@ -291,6 +299,12 @@
   (setq helm-rg--current-dir "/home/jgarcia/Projects/disney")
   (helm-rg())
   )
+(defun findsys ()
+    (interactive)
+  (find-file (helm :sources (helm-build-sync-source "FindAll in ~/.config/"
+                 :candidates (split-string (shell-command-to-string "find ~/.config/") "\n")
+                 :fuzzy-match nil)
+      :buffer "*helm test*")))
 (defun findall ()
     (interactive)
   (find-file (helm :sources (helm-build-sync-source "FindAll in ~/Projects/disney"
@@ -323,3 +337,4 @@
 (setq org-confirm-babel-evaluate t)
 (setq tree-sitter-mode t)
 (setq tree-sitter-hl-mode t)
+
