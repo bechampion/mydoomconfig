@@ -93,6 +93,7 @@
 (package! ellama)
 (package! tree-sitter)
 (package! tree-sitter-langs)
+(package! gptel)
 (unpin! fzf)
 (package! ox-slack)
 ;; (unpin! treemacs)

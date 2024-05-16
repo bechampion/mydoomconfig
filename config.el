@@ -3,7 +3,8 @@
 ;;       "w w" #'window-resize-to-70-percent)
 (map! :desc "Boomarks"
       :leader
-      "<RET>" #'bookmark-bmenu-list)
+      "<RET>" #'bookmark-bmenu-list
+      "D" #'open-notes)
 (map! :desc "Some org things"
       :leader
       "d d" #'orgdate)
@@ -45,6 +46,9 @@
 (map! :leader
       :desc "dired jump"
       "f j" #'dired-jump)
+(map! :leader
+      :desc "Tmux"
+      "t t" #'open-tmux-in-file-directory)
 (map! :leader
       :desc "Helm Mx"
       "<SPC>" #'helm-M-x)
@@ -337,4 +341,24 @@
 (setq org-confirm-babel-evaluate t)
 (setq tree-sitter-mode t)
 (setq tree-sitter-hl-mode t)
+(defun open-tmux-in-file-directory ()
+;;Open a tmux pane in the directory of the current buffer's file
+  (interactive)
+  (let ((file-dir (file-name-directory (buffer-file-name))))
+    (unless file-dir
+      (error "Buffer is not visiting a file"))
+        (start-process "tmux-new-window" nil "tmux" "new-window" "-c" file-dir "-n" "Emacs")
+        (shell-command "jumpapp alacritty")
+    ))
 
+
+;; Open My Notes
+(defun open-file-in-buffer (file-path)
+  (interactive "FOpen file: ")
+  (let ((buffer (find-file-noselect file-path)))
+    (switch-to-buffer buffer)))
+
+(defun open-notes()
+  "Open a specific file in a new buffer."
+  (interactive)
+  (open-file-in-buffer "/home/jgarcia/org/d.org.gpg"))
