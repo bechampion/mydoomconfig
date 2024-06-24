@@ -365,8 +365,6 @@
   (open-file-in-buffer "/home/jgarcia/org/d.org.gpg"))
 (use-package! gptel
  :config
- (setq! gptel-api-key "sk-proj-6r6AadyDqymScB8gfoxET3BlbkFJdXjwfkPC1uwVC6RlFwGp"))
-(setq chatgpt-shell-openai-key "sk-proj-6r6AadyDqymScB8gfoxET3BlbkFJdXjwfkPC1uwVC6RlFwGp")
 (setq-hook! 'go-mode-hook +format-with-lsp nil)
 (with-eval-after-load 'helm
   (define-key helm-map (kbd "C-j") 'helm-next-line)
