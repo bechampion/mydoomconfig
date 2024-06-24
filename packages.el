@@ -96,5 +96,6 @@
 (package! gptel)
 (unpin! fzf)
 (package! ox-slack)
+(package! chatgpt-shell)
 ;; (unpin! treemacs)
 ;; (unpin! lsp-treemacs)

@@ -197,6 +197,7 @@
 (define-key evil-normal-state-map (kbd "<up>") 'ignore)
 (define-key evil-visual-state-map (kbd "<up>") 'ignore)
 (setenv "GOPATH" "/home/jgarcia/go")
+(setenv "GOFLAGS" "-mod=readonly")
 (setenv "GO111MODULE" "on")
 (setq fzf/args "-x --print-query --margin=1,0 --color --bind esc:abort"
       fzf/executable "fzf"
@@ -362,3 +363,13 @@
   "Open a specific file in a new buffer."
   (interactive)
   (open-file-in-buffer "/home/jgarcia/org/d.org.gpg"))
+(use-package! gptel
+ :config
+ (setq! gptel-api-key "sk-proj-6r6AadyDqymScB8gfoxET3BlbkFJdXjwfkPC1uwVC6RlFwGp"))
+(setq chatgpt-shell-openai-key "sk-proj-6r6AadyDqymScB8gfoxET3BlbkFJdXjwfkPC1uwVC6RlFwGp")
+(setq-hook! 'go-mode-hook +format-with-lsp nil)
+(with-eval-after-load 'helm
+  (define-key helm-map (kbd "C-j") 'helm-next-line)
+  (define-key helm-map (kbd "C-k") 'helm-previous-line)
+  (define-key helm-map (kbd "<escape>") 'helm-keyboard-quit)
+)
